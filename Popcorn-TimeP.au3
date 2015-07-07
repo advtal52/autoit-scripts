@@ -4,9 +4,9 @@
 #AutoIt3Wrapper_Compile_Both=y
 #include <Constants.au3>
 
-$_BASEDIR				= @ScriptDir;
-$_CFGDIR				= $_BASEDIR & "\cfg\";
-$_APPDATADIR			= RegRead('HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', 'Local AppData');
+$_BASEDIR		= @ScriptDir;
+$_CFGDIR		= $_BASEDIR & "\cfg\";
+$_APPDATADIR		= RegRead('HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders', 'Local AppData');
 $_POPCORN_TIME_LOCAL	= $_APPDATADIR & "\Popcorn-Time";
 
 TEST_DIRECTORY()
@@ -18,7 +18,7 @@ Func TEST_DIRECTORY()
     Else
 		CREATE_JUNCTION_DIRECTORY()
 		RUN_POPCORN_TIME()
-        TEST_PROCESS_RUNNIG()
+	        TEST_PROCESS_RUNNIG()
     EndIf
 EndFunc
 
@@ -30,8 +30,8 @@ EndFunc
 Func TEST_PROCESS_RUNNIG()
 	While True
 		If Not ProcessExists("Popcorn-Time.exe") Then
-				DELETE_JUNCTION_DIRECTORY()
-				ExitLoop
+			DELETE_JUNCTION_DIRECTORY()
+			ExitLoop
 		EndIf
 		Sleep (5000)
 	WEnd
