@@ -1,4 +1,5 @@
 #NoTrayIcon
+#AutoIt3Wrapper_UseX64=n
 #AutoIt3Wrapper_Icon=popcorn-time.ico
 #AutoIt3Wrapper_Compile_Both=y
 #include <Constants.au3>
